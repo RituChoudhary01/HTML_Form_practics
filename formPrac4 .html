@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form-4</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: black;
+        height: 100vh;
+        font-family: Poppines, sans-serif;
+        font-size: 22px;
+        color: rgb(72, 71, 71);
+        font-weight: 300;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .container {
+        width: 50%;
+        background: linear-gradient(rgb(238, 144, 222), rgb(86, 139, 236));
+        min-height: 100vh;
+      }
+      label {
+        display: block;
+        margin: 2px 5%;
+      }
+      .container1 {
+        display: flex;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"] {
+        margin: 2px 5% 10px;
+        padding: 12px 8px;
+        width: 90%;
+        height: 45px;
+        border: none;
+        margin-right: min(0, 5%);
+        border-radius: 5px;
+      }
+      input[type="text"]:hover,
+      input[type="email"]:hover,
+      input[type="tel"]:hover {
+        background-color: transparent;
+      }
+
+      h1 {
+        text-align: center;
+        font-weight: 100;
+        margin: 30px;
+      }
+      span {
+        color: red;
+      }
+      .button {
+        display: block;
+        background-color: rgb(34, 34, 219);
+        color: white;
+        font-size: large;
+        padding: 10px 20px;
+        margin: auto;
+        border: none;
+        margin-top: 30px;
+        border-radius: 2px;
+      }
+      .button:hover {
+        background-color: blue;
+      }
+      @media only screen and (max-width: 768px) {
+        .container1 {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>School Championship Registration Form</h1>
+      <form action="">
+        <label for="schoolname">School name: <span>*</span></label>
+        <input type="text" id="schoolname" required />
+      </form>
+      <label for="schoolername" class="names"
+        >Schooler name: <span>*</span></label
+      >
+      <div class="container1">
+        <input type="text" placeholder="First" required />
+        <input type="text" placeholder="Last" required />
+      </div>
+
+      <label for="parentname" class="names">Parent name: <span>*</span></label>
+      <div class="container1">
+        <input type="text" placeholder="First" required />
+        <input type="text" placeholder="Last" required />
+      </div>
+      <label>Parent Phone: <span>*</span></label>
+      <input type="tel" placeholder="### ### ####" required />
+      <label>Parent email:<span>*</span> </label>
+      <input type="email" required />
+      <label>Preferred sport: <span>*</span></label>
+      <input type="text" required />
+      <input class="button" type="submit" value="Submit" />
+    </div>
+  </body>
+</html>
